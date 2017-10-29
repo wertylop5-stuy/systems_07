@@ -1,4 +1,12 @@
-all: main.c
-	gcc -o run main.c
+rand: main.o
+	gcc -o rand main.o
+	make clean
 
-run: all
+main.o:
+	gcc -c main.c
+
+clean:
+	rm *.o
+
+run:
+	./rand
